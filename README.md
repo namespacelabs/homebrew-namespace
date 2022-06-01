@@ -1,11 +1,15 @@
-# Namespacelabs Repo
+# Namespace Homebrew repo
 
-## How do I install these formulae?
+To install you need to procure [a token for this](https://github.com/settings/tokens)
+(with repo access) and run the following:
 
-`brew install namespacelabs/repo/<formula>`
+    $ brew tap namespacelabs/namespace git@github.com:namespacelabs/homebrew-namespace.git
+    $ HOMEBREW_GITHUB_API_TOKEN=... brew install namespacelabs/namespace/fn
 
-Or `brew tap namespacelabs/repo` and then `brew install <formula>`.
+Once the repo becomes public we can remove `lib/custom_download_strategy.rb` and simple
+`brew install namespacelabs/namespace/fn` will do the right thing.
 
-## Documentation
+## Releasing
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+Running GoReleaser in the main `foundation` repo does the right thing. It is configured
+in the `brews` section of `.goreleaser.yaml`.
