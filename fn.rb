@@ -9,16 +9,16 @@ class Fn < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.42/fn_0.0.42_darwin_arm64.tar.gz"
-      sha256 "dca5b8d4e91e4ea28e8fc8da5b668f7770b1a3d7bf29f44b91605d0c1c419c46"
+      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.42/fn_0.0.42_darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "be24b5b7309add44d4eef5e93d23b0f7f5cfa05557b7759008355faffa69edb1"
 
       def install
         bin.install "fn"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.42/fn_0.0.42_darwin_amd64.tar.gz"
-      sha256 "4b8bb3776b748ade43edcb7333b0c65e093b7788d323e609e2a73cd37fcea5b4"
+      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.42/fn_0.0.42_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "13f1ff7e20c254fa7d491b500d52a97880122e80bf8a5ca88bf2af51300c2412"
 
       def install
         bin.install "fn"
@@ -28,16 +28,16 @@ class Fn < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.42/fn_0.0.42_linux_arm64.tar.gz"
-      sha256 "08eed9d5b0a18e1d00b704f9d4f484bca00a92d89596a402f91a23731d1d1b22"
+      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.42/fn_0.0.42_linux_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "1ea8b776b24228c1f48c0db4a80317576fad6046297298b1174e2dc1be6f9553"
 
       def install
         bin.install "fn"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.42/fn_0.0.42_linux_amd64.tar.gz"
-      sha256 "2bd4e8452f5e8703eb5702124f2c5e992b803b89602073b676231a4949a811b1"
+      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.42/fn_0.0.42_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "bdcac64ea6a989c8746f04cddef74307ab179ee9349ec1fc4f101771148ccff1"
 
       def install
         bin.install "fn"
