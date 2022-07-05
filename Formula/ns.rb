@@ -6,20 +6,20 @@ require_relative "../lib/custom_download_strategy"
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.45"
+  version "0.0.46"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.45/ns_0.0.45_darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "435783b9d6d1948f7609d8ee92ee05c086f69d02de7d360cbb278f27e40b52bf"
+      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.46/ns_0.0.46_darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "e6c8f4cfdceace0a2b4e919b015d39ebea5b17814e57a79d15f8e0f1412d4a1d"
 
       def install
         bin.install "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.45/ns_0.0.45_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "6d172f49013f5b96409ec2836e2b32f5c5ddffe98fa29762e94386a00696a069"
+      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.46/ns_0.0.46_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "97e28d2d3c5123dce22dd715da7c380cdfc3bc1d92e8467020714af317f8fd36"
 
       def install
         bin.install "ns"
@@ -29,16 +29,16 @@ class Ns < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.45/ns_0.0.45_linux_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "a59596161bde43ae0868d736606dd2ad37bae9219a96f3b4aca59e89230062b1"
+      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.46/ns_0.0.46_linux_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "61307817dcd1d47aebe6a70f97683cc284a1c1b175aa868c1d5f58a7ae712e4f"
 
       def install
         bin.install "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.45/ns_0.0.45_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "037490a66e4ca70eaa6068537f98a541699b6ba1b1303732f71ed5cdbd85c9db"
+      url "https://github.com/namespacelabs/foundation/releases/download/v0.0.46/ns_0.0.46_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "38b31a47ae75fc321f7b1b042f62f098623b5c73860270e4363d585f74d37b4a"
 
       def install
         bin.install "ns"
