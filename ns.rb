@@ -5,20 +5,20 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.47"
+  version "0.0.48"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/ns/v0.0.47/ns_0.0.47_darwin_arm64.tar.gz"
-      sha256 "a64d0e4e2db3d6542437411c107020de4a6bf56370c6225428ea62c664233a88"
+      url "https://ns-releases.s3.us-east-2.amazonaws.com/ns/v0.0.48/ns_0.0.48_darwin_arm64.tar.gz"
+      sha256 "d3b04e2aec5596b93c7d349dce5994e92b3190e520b6ea6dcf7e091769f62b1f"
 
       def install
         bin.install "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/ns/v0.0.47/ns_0.0.47_darwin_amd64.tar.gz"
-      sha256 "c36d40f35a575967e655599e7fc6715196c1b7ac419e1983b257c8e225bb5531"
+      url "https://ns-releases.s3.us-east-2.amazonaws.com/ns/v0.0.48/ns_0.0.48_darwin_amd64.tar.gz"
+      sha256 "953ecfb3ce9882d28f8fe8d6749c0e563094c27076b3a1e453c9c4ecef78699b"
 
       def install
         bin.install "ns"
@@ -28,16 +28,16 @@ class Ns < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/ns/v0.0.47/ns_0.0.47_linux_arm64.tar.gz"
-      sha256 "e4ba7c84ff49124dd97843108f691af2837029cfe4353d5be031fb0a141200c7"
+      url "https://ns-releases.s3.us-east-2.amazonaws.com/ns/v0.0.48/ns_0.0.48_linux_arm64.tar.gz"
+      sha256 "2919383168bc7470cd879d4c8687932969f78189c269cac595e1104cf48d1a8b"
 
       def install
         bin.install "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/ns/v0.0.47/ns_0.0.47_linux_amd64.tar.gz"
-      sha256 "7344fee83fb640b3aaa2b5ab73aa415548e7ec727881d929c4bf9a3399a3bef6"
+      url "https://ns-releases.s3.us-east-2.amazonaws.com/ns/v0.0.48/ns_0.0.48_linux_amd64.tar.gz"
+      sha256 "756dc3a816125a4bd0db3d4d06ca485ffe578b7714af023008b4f97b0685851b"
 
       def install
         bin.install "ns"
