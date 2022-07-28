@@ -10,18 +10,20 @@ class Ns < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.50/nsboot_0.0.50_darwin_arm64.tar.gz"
-      sha256 "de0cad1cc9105f2a55a6caad03c19f3923bf8cbd3932f9a1423b20f90e260249"
+      sha256 "4fa4a03fe04030c49515af53330db533e9ea3c71ac0c022cddca1c55a6188fd2"
 
       def install
-        libexec.install "nsboot" bin.install_symlink libexec/"nsboot" => "ns"
+        libexec.install "nsboot"
+        bin.install_symlink libexec/"nsboot" => "ns"
       end
     end
     if Hardware::CPU.intel?
       url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.50/nsboot_0.0.50_darwin_amd64.tar.gz"
-      sha256 "82a0bfce75593ba068cf333bfec59a0a7de0cb42a965a4f94bcbae8114a81a12"
+      sha256 "6cb21401004571b873c7cf1744296dec78cd14f56925e17e4e1e12724e2b7748"
 
       def install
-        libexec.install "nsboot" bin.install_symlink libexec/"nsboot" => "ns"
+        libexec.install "nsboot"
+        bin.install_symlink libexec/"nsboot" => "ns"
       end
     end
   end
@@ -29,18 +31,20 @@ class Ns < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.50/nsboot_0.0.50_linux_arm64.tar.gz"
-      sha256 "cc51efa3483705da5df0b7f186e190d67c852c13728773edc6c06289f9053100"
+      sha256 "95671084dbf2ae5c480b58297133689a33c6f1ee178f6b8e05c5909a6bf61977"
 
       def install
-        libexec.install "nsboot" bin.install_symlink libexec/"nsboot" => "ns"
+        libexec.install "nsboot"
+        bin.install_symlink libexec/"nsboot" => "ns"
       end
     end
     if Hardware::CPU.intel?
       url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.50/nsboot_0.0.50_linux_amd64.tar.gz"
-      sha256 "1045406173c5bd9084224099dc5082bae4906a6e341bfa9058349373929d17b7"
+      sha256 "a2c911c5b78ca0f2f259df6d089f9d9c8423cf72c7c1d8f5c8ee48ef42e3c4e2"
 
       def install
-        libexec.install "nsboot" bin.install_symlink libexec/"nsboot" => "ns"
+        libexec.install "nsboot"
+        bin.install_symlink libexec/"nsboot" => "ns"
       end
     end
   end
