@@ -5,42 +5,42 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.49"
+  version "0.0.50"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/ns/v0.0.49/ns_0.0.49_darwin_arm64.tar.gz"
-      sha256 "efaf9795dc06b4ce6dd9f9776877d980886473ada50018303d54e64a1b1fbbe8"
+      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.50/nsboot_0.0.50_darwin_arm64.tar.gz"
+      sha256 "de0cad1cc9105f2a55a6caad03c19f3923bf8cbd3932f9a1423b20f90e260249"
 
       def install
-        bin.install "ns"
+        libexec.install "nsboot" bin.install_symlink libexec/"nsboot" => "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/ns/v0.0.49/ns_0.0.49_darwin_amd64.tar.gz"
-      sha256 "1a68e0110795d26a638ef202db3cb3f44b85d684080a2c498dee64b682e973e9"
+      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.50/nsboot_0.0.50_darwin_amd64.tar.gz"
+      sha256 "82a0bfce75593ba068cf333bfec59a0a7de0cb42a965a4f94bcbae8114a81a12"
 
       def install
-        bin.install "ns"
+        libexec.install "nsboot" bin.install_symlink libexec/"nsboot" => "ns"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/ns/v0.0.49/ns_0.0.49_linux_arm64.tar.gz"
-      sha256 "3d2aa12618b0884b5e4f4dcd88e8933caf397244f368104ae54bfd9453fb80dc"
+      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.50/nsboot_0.0.50_linux_arm64.tar.gz"
+      sha256 "cc51efa3483705da5df0b7f186e190d67c852c13728773edc6c06289f9053100"
 
       def install
-        bin.install "ns"
+        libexec.install "nsboot" bin.install_symlink libexec/"nsboot" => "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/ns/v0.0.49/ns_0.0.49_linux_amd64.tar.gz"
-      sha256 "28222c3e7ff21de46d3fbc4beed9001e88708e923e219c3ba9492ff53982aa49"
+      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.50/nsboot_0.0.50_linux_amd64.tar.gz"
+      sha256 "1045406173c5bd9084224099dc5082bae4906a6e341bfa9058349373929d17b7"
 
       def install
-        bin.install "ns"
+        libexec.install "nsboot" bin.install_symlink libexec/"nsboot" => "ns"
       end
     end
   end
