@@ -2,7 +2,7 @@
 
 ## Installation
 
-    $ brew install namespacelabs/namespace/ns
+    brew install namespacelabs/namespace/ns
 
 ## Releasing
 
