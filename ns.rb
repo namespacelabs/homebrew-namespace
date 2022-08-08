@@ -5,12 +5,12 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.50"
+  version "0.0.51"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.50/nsboot_0.0.50_darwin_arm64.tar.gz"
-      sha256 "4fa4a03fe04030c49515af53330db533e9ea3c71ac0c022cddca1c55a6188fd2"
+      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.51/nsboot_0.0.51_darwin_arm64.tar.gz"
+      sha256 "dd3032df9be3e4581e64a97929a275a513e9a2c52a04ce26340fe78046318f32"
 
       def install
         libexec.install "nsboot"
@@ -18,8 +18,8 @@ class Ns < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.50/nsboot_0.0.50_darwin_amd64.tar.gz"
-      sha256 "6cb21401004571b873c7cf1744296dec78cd14f56925e17e4e1e12724e2b7748"
+      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.51/nsboot_0.0.51_darwin_amd64.tar.gz"
+      sha256 "2e208735406aaf334ad7cefe5179e1b050d351eb1e9a5955652dfc3315aa237f"
 
       def install
         libexec.install "nsboot"
@@ -30,8 +30,8 @@ class Ns < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.50/nsboot_0.0.50_linux_arm64.tar.gz"
-      sha256 "95671084dbf2ae5c480b58297133689a33c6f1ee178f6b8e05c5909a6bf61977"
+      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.51/nsboot_0.0.51_linux_arm64.tar.gz"
+      sha256 "3f425b20fe500cf54a4cda460d203c9907b3421e198c42e2ff5b32fc7ae90f9b"
 
       def install
         libexec.install "nsboot"
@@ -39,8 +39,8 @@ class Ns < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.50/nsboot_0.0.50_linux_amd64.tar.gz"
-      sha256 "a2c911c5b78ca0f2f259df6d089f9d9c8423cf72c7c1d8f5c8ee48ef42e3c4e2"
+      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.51/nsboot_0.0.51_linux_amd64.tar.gz"
+      sha256 "2586140bcc79ad3bc6fa71a290cb1e3af4a4e2caaee812197bf629310a0a26d0"
 
       def install
         libexec.install "nsboot"
