@@ -9,7 +9,7 @@ class Ns < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.73/nsboot_0.0.73_darwin_arm64.tar.gz"
+      url "https://get.namespace.so/packages/nsboot/v0.0.73/nsboot_0.0.73_darwin_arm64.tar.gz"
       sha256 "e6a32c943438269dd4d552ab155e1d8c4d1f78739881e7f0a6fb9524a4f9b741"
 
       def install
@@ -18,7 +18,7 @@ class Ns < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.73/nsboot_0.0.73_darwin_amd64.tar.gz"
+      url "https://get.namespace.so/packages/nsboot/v0.0.73/nsboot_0.0.73_darwin_amd64.tar.gz"
       sha256 "c7a4b38e565d1576cb82c65e7c44bec67c80f69d4ee67e537f2d5494845d42d9"
 
       def install
@@ -30,7 +30,7 @@ class Ns < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.73/nsboot_0.0.73_linux_arm64.tar.gz"
+      url "https://get.namespace.so/packages/nsboot/v0.0.73/nsboot_0.0.73_linux_arm64.tar.gz"
       sha256 "69e09009ab3c3a8f01e3c54a6e7b1726ecdd043290f9b3a3683f4a8302101696"
 
       def install
@@ -39,7 +39,7 @@ class Ns < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://ns-releases.s3.us-east-2.amazonaws.com/nsboot/v0.0.73/nsboot_0.0.73_linux_amd64.tar.gz"
+      url "https://get.namespace.so/packages/nsboot/v0.0.73/nsboot_0.0.73_linux_amd64.tar.gz"
       sha256 "7a5a8d575d9f52e9cfb4b0e14e9e6293903d98cd448e2b2b9c0cf47a6fbbcafb"
 
       def install
