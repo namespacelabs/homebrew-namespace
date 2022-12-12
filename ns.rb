@@ -5,47 +5,51 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.73"
+  version "0.0.110"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/nsboot/v0.0.73/nsboot_0.0.73_darwin_arm64.tar.gz"
-      sha256 "e6a32c943438269dd4d552ab155e1d8c4d1f78739881e7f0a6fb9524a4f9b741"
+      url "https://get.namespace.so/packages/ns/v0.0.110/ns_0.0.110_darwin_arm64.tar.gz"
+      sha256 "76a9686c950954cc22e4ecd844e37e3c9402327a772477ee6d5ee1b3a32cec6e"
 
       def install
-        libexec.install "nsboot"
-        bin.install_symlink libexec/"nsboot" => "ns"
+        bin.install "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/nsboot/v0.0.73/nsboot_0.0.73_darwin_amd64.tar.gz"
-      sha256 "c7a4b38e565d1576cb82c65e7c44bec67c80f69d4ee67e537f2d5494845d42d9"
+      url "https://get.namespace.so/packages/ns/v0.0.110/ns_0.0.110_darwin_amd64.tar.gz"
+      sha256 "5f976af3423af4f887f1ddc4a1b2755982beae36022be5dcf37e1beac667d1b9"
 
       def install
-        libexec.install "nsboot"
-        bin.install_symlink libexec/"nsboot" => "ns"
+        bin.install "ns"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/nsboot/v0.0.73/nsboot_0.0.73_linux_arm64.tar.gz"
-      sha256 "69e09009ab3c3a8f01e3c54a6e7b1726ecdd043290f9b3a3683f4a8302101696"
+      url "https://get.namespace.so/packages/ns/v0.0.110/ns_0.0.110_linux_arm64.tar.gz"
+      sha256 "6c6458521d3bb17c6699431fd0c60c1cb8a0de7ed470a83e0047034df7a79321"
 
       def install
-        libexec.install "nsboot"
-        bin.install_symlink libexec/"nsboot" => "ns"
+        bin.install "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/nsboot/v0.0.73/nsboot_0.0.73_linux_amd64.tar.gz"
-      sha256 "7a5a8d575d9f52e9cfb4b0e14e9e6293903d98cd448e2b2b9c0cf47a6fbbcafb"
+      url "https://get.namespace.so/packages/ns/v0.0.110/ns_0.0.110_linux_amd64.tar.gz"
+      sha256 "63b4b9088ee7f078efaee5a1c3a15d4e176cdb38dade1a9e0f425d409baffa2d"
 
       def install
-        libexec.install "nsboot"
-        bin.install_symlink libexec/"nsboot" => "ns"
+        bin.install "ns"
       end
     end
+  end
+
+  def caveats; <<~EOS
+    Note: Note: ns collects usage telemetry. This data helps us build a better
+    platform for you. You can learn more at https://namespace.so/telemetry.
+
+    Check out our examples at https://namespace.so/docs#examples to get started.
+  EOS
   end
 end
