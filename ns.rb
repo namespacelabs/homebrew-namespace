@@ -5,20 +5,20 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.143"
+  version "0.0.144"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/ns/v0.0.143/ns_0.0.143_darwin_arm64.tar.gz"
-      sha256 "7cb46f20f1eff9371b6ac68bd77aebaea508f3c4bc0544ecbeaa5b271aca183d"
+      url "https://get.namespace.so/packages/ns/v0.0.144/ns_0.0.144_darwin_arm64.tar.gz"
+      sha256 "5aec46d5c24fabcc204235af0dbbde4731219bc2be921a508d8425444f77e027"
 
       def install
         bin.install "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/ns/v0.0.143/ns_0.0.143_darwin_amd64.tar.gz"
-      sha256 "c52f471c1b5262d61ce9daa775bcdad95c66f72d3a696d34dfd1f1cf951fda70"
+      url "https://get.namespace.so/packages/ns/v0.0.144/ns_0.0.144_darwin_amd64.tar.gz"
+      sha256 "ec09550101e0ee602c987b05dde88989a207449643221211754f4bed2494a883"
 
       def install
         bin.install "ns"
@@ -28,16 +28,16 @@ class Ns < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/ns/v0.0.143/ns_0.0.143_linux_arm64.tar.gz"
-      sha256 "c36ac35912c3b58dfd9b58e3e027def3baeeffba304868886ec66429c250ce79"
+      url "https://get.namespace.so/packages/ns/v0.0.144/ns_0.0.144_linux_arm64.tar.gz"
+      sha256 "4c2848977d2cc598dcd9d70d147848772523c9aa3fe2ab6f9db0761074db87a2"
 
       def install
         bin.install "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/ns/v0.0.143/ns_0.0.143_linux_amd64.tar.gz"
-      sha256 "f691099647f12271a31cefa495619a9c7261cb08847079b834ce83d2face7d08"
+      url "https://get.namespace.so/packages/ns/v0.0.144/ns_0.0.144_linux_amd64.tar.gz"
+      sha256 "b1ad1b39d81625db11bc5d1e4b8addd6f9b58a8d41913f16ec24d012dd18399a"
 
       def install
         bin.install "ns"
@@ -45,12 +45,11 @@ class Ns < Formula
     end
   end
 
-  def caveats
-    <<~EOS
-      Note: Note: ns collects usage telemetry. This data helps us build a better
-      platform for you. You can learn more at https://namespace.so/telemetry.
+  def caveats; <<~EOS
+    Note: Note: ns collects usage telemetry. This data helps us build a better
+    platform for you. You can learn more at https://namespace.so/telemetry.
 
-      Check out our examples at https://namespace.so/docs#examples to get started.
-    EOS
+    Check out our examples at https://namespace.so/docs#examples to get started.
+  EOS
   end
 end
