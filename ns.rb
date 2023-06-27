@@ -5,20 +5,20 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.255"
+  version "0.0.256"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/ns/v0.0.255/ns_0.0.255_darwin_amd64.tar.gz"
-      sha256 "7e95659c680d1470559bcd64c0969e6f1d77156a0483f1d4828c9e9838ab04dd"
+    if Hardware::CPU.arm?
+      url "https://get.namespace.so/packages/ns/v0.0.256/ns_0.0.256_darwin_arm64.tar.gz"
+      sha256 "98e32b7612b2d371a93e3b5720e8080c526303bbc277d1f2c691ea7855eb8691"
 
       def install
         bin.install "ns"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/ns/v0.0.255/ns_0.0.255_darwin_arm64.tar.gz"
-      sha256 "172edc5feee84f5281f46887cfa90410ecc61d275f713bb567bf8cfd1447cd30"
+    if Hardware::CPU.intel?
+      url "https://get.namespace.so/packages/ns/v0.0.256/ns_0.0.256_darwin_amd64.tar.gz"
+      sha256 "66391f53783e8f933bac31a0dccbf53ba0c3dd70dc0918fee3f548d2074139f2"
 
       def install
         bin.install "ns"
@@ -28,16 +28,16 @@ class Ns < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/ns/v0.0.255/ns_0.0.255_linux_arm64.tar.gz"
-      sha256 "d000be7f0c28d9642654bf3ed6e092523ee14da85b6238a82f5ecdbb6042532e"
+      url "https://get.namespace.so/packages/ns/v0.0.256/ns_0.0.256_linux_arm64.tar.gz"
+      sha256 "1513a23b7d8d6896325d8677307828d1067560ba96236eadc8513241f8a5223c"
 
       def install
         bin.install "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/ns/v0.0.255/ns_0.0.255_linux_amd64.tar.gz"
-      sha256 "9ff6041898103e77ae72081940a6fd3129354423436f8d8fe1dbc14107cf61f5"
+      url "https://get.namespace.so/packages/ns/v0.0.256/ns_0.0.256_linux_amd64.tar.gz"
+      sha256 "a9f91aa7eaa7aa7dc5dad54ce14d0a6822874458c1596a8a4f7e7457fe53a41b"
 
       def install
         bin.install "ns"
