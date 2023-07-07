@@ -5,20 +5,20 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.258"
+  version "0.0.259"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/ns/v0.0.258/ns_0.0.258_darwin_arm64.tar.gz"
-      sha256 "d3fe90040a7601adcd5556c12ab6dc27016607e29434a51ccbafdf6f54c1b85f"
+      url "https://get.namespace.so/packages/ns/v0.0.259/ns_0.0.259_darwin_arm64.tar.gz"
+      sha256 "e0e4d5249ba79e3f5048e92ed75b78b6e00e49ed79063f08a8f0892f26f7cc76"
 
       def install
         bin.install "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/ns/v0.0.258/ns_0.0.258_darwin_amd64.tar.gz"
-      sha256 "70480f721b272ab615ac6ac363f32f3291b22995db09a38583435e2abbcdb2e6"
+      url "https://get.namespace.so/packages/ns/v0.0.259/ns_0.0.259_darwin_amd64.tar.gz"
+      sha256 "7f57cde3c4e734fa9b9ef2d4e83e809eaf4da85be822005528ce68406f133965"
 
       def install
         bin.install "ns"
@@ -28,16 +28,16 @@ class Ns < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/ns/v0.0.258/ns_0.0.258_linux_arm64.tar.gz"
-      sha256 "d537fc25e33e5c4782f15732016fd66c65bc60eae2977775d1cac07c2aa55c61"
+      url "https://get.namespace.so/packages/ns/v0.0.259/ns_0.0.259_linux_arm64.tar.gz"
+      sha256 "a5389689b29c0c149eb68a7970c211cb0f3fc0ad21667d4f135043f29ec6f5d2"
 
       def install
         bin.install "ns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/ns/v0.0.258/ns_0.0.258_linux_amd64.tar.gz"
-      sha256 "6fd8b1da899587ceea559dabffcbcf1dfdba2512914add3756b0f55f6da3d85a"
+      url "https://get.namespace.so/packages/ns/v0.0.259/ns_0.0.259_linux_amd64.tar.gz"
+      sha256 "735b22a208b0151c55fd012358035deaedb2cc4137ed90c4667c9501146db331"
 
       def install
         bin.install "ns"
