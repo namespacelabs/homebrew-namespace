@@ -2,7 +2,13 @@
 
 ## Installation
 
-    brew install namespacelabs/namespace/ns
+```sh
+# Access to Namespace Cloud
+$ brew install namespacelabs/namespace/nsc
+
+# Namespace's Developer platform
+$ brew install namespacelabs/namespace/ns
+```
 
 ## Releasing
 
