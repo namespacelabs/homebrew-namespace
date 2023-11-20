@@ -1,0 +1,5 @@
+This package configures a Homebrew service backing Docker remote builds on
+Namespace infrastructure.
+
+This package only contains the README file. The actual implementation is inside
+namespacelabs/namespace/nsc package.
