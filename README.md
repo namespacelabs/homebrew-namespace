@@ -6,6 +6,10 @@
 # Access to Namespace Cloud
 $ brew install namespacelabs/namespace/nsc
 
+## Install and run the Remote Docker Builder Service
+$ brew install namespacelabs/namespace/nsc-remote-builder
+$ brew services start nsc-remote-builder
+
 # Namespace's Developer platform
 $ brew install namespacelabs/namespace/ns
 ```
