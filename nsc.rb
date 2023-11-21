@@ -5,12 +5,14 @@
 class Nsc < Formula
   desc "Container-optimized cloud infrastructure that just works."
   homepage "https://namespace.so/"
-  version "0.0.307"
+  version "0.0.309"
+
+  depends_on "namespacelabs/namespace/nsc-remote-builder" => :recommended
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/nsc/v0.0.307/nsc_0.0.307_darwin_arm64.tar.gz"
-      sha256 "c11ac46d001bd78cedf47944485a48c45b8c66f4f68bcdaa28d6cdd8fc29fcfd"
+      url "https://get.namespace.so/packages/nsc/v0.0.309/nsc_0.0.309_darwin_arm64.tar.gz"
+      sha256 "bc567aea36c0578305db141ef96de0a6dbfe557037a1859bfe356c0dc8a23d88"
 
       def install
         bin.install "nsc"
@@ -18,8 +20,8 @@ class Nsc < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/nsc/v0.0.307/nsc_0.0.307_darwin_amd64.tar.gz"
-      sha256 "2fc34fa930ef89e46002195c4b235bf935a0c746f10ff7e612dcdd27621d0014"
+      url "https://get.namespace.so/packages/nsc/v0.0.309/nsc_0.0.309_darwin_amd64.tar.gz"
+      sha256 "7383649cc30db297875d8792426f0d44c2c69bf745375b3b6fe3d239e42aacdd"
 
       def install
         bin.install "nsc"
@@ -30,8 +32,8 @@ class Nsc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/nsc/v0.0.307/nsc_0.0.307_linux_arm64.tar.gz"
-      sha256 "48f7d46ed5244d32374582fe1a6f9cc6f4233b8347acbbd9b42680191f4e25f6"
+      url "https://get.namespace.so/packages/nsc/v0.0.309/nsc_0.0.309_linux_arm64.tar.gz"
+      sha256 "26d2030f51c48e557a000d13218ec96f890cea825b044e47add3b9601ba36995"
 
       def install
         bin.install "nsc"
@@ -39,20 +41,13 @@ class Nsc < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/nsc/v0.0.307/nsc_0.0.307_linux_amd64.tar.gz"
-      sha256 "5331e21811d52cff2c02e6795f78f47d50d539fe75f1262f8c234cb4a1be4b44"
+      url "https://get.namespace.so/packages/nsc/v0.0.309/nsc_0.0.309_linux_amd64.tar.gz"
+      sha256 "d6dfbc80caa0e2a03fb02b40661b4c46ffdde4b9fb44026cc9e6a5db6484d6d3"
 
       def install
         bin.install "nsc"
         bin.install "docker-credential-nsc"
       end
     end
-  end
-
-  service do
-    run [opt_bin/"nsc", "docker", "buildx", "setup", "--use", "--force_cleanup", "--debug_to_file", var/"nsc/log/buildx.log"]
-    run_at_load false
-    keep_alive true
-    environment_variables NS_DO_NOT_UPDATE: true
   end
 end
