@@ -1,7 +1,7 @@
 class NscRemoteBuilder < Formula
   desc "Homebrew service backing Docker remote builds. Run `brew services start nsc-remote-builder`"
   homepage "https://namespace.so/"
-  version "0.0.1"
+  version "0.0.2"
 
   depends_on "namespacelabs/namespace/nsc"
 
@@ -16,7 +16,7 @@ class NscRemoteBuilder < Formula
 
   service do
     nsc = Formula['nsc']
-    run [nsc.bin/"nsc", "docker", "buildx", "setup", "--use", "--force_cleanup", "--debug_to_file", var/"nsc/log/buildx.log"]
+    run [nsc.bin/"nsc", "docker", "buildx", "setup", "--use", "--force_cleanup", "--wait_for_login", "--debug_to_file", var/"nsc/log/buildx.log"]
     run_at_load false
     keep_alive true
     environment_variables NS_DO_NOT_UPDATE: true
