@@ -10,7 +10,7 @@ class Nsc < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://get.namespace.so/packages/nsc/v0.0.329/nsc_0.0.329_darwin_arm64.tar.gz"
-      sha256 "2d8c03dfd51d894b6de8bbf7457843e752f7090b764efe81e199ee47976f0cb4"
+      sha256 "acd21a63da6df2652c8120115fecc5f69066fd0da123c79d47616e410d7aad2c"
 
       def install
         bin.install "nsc"
@@ -19,7 +19,7 @@ class Nsc < Formula
     end
     if Hardware::CPU.intel?
       url "https://get.namespace.so/packages/nsc/v0.0.329/nsc_0.0.329_darwin_amd64.tar.gz"
-      sha256 "81c54bba1455b6f47cad666e949151d70580365c15d16e0101d7a83afdb4c146"
+      sha256 "6d90df80ca56a6931db770ff923b0ef349a6361aa8c88f2594183a1476b33298"
 
       def install
         bin.install "nsc"
@@ -31,7 +31,7 @@ class Nsc < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://get.namespace.so/packages/nsc/v0.0.329/nsc_0.0.329_linux_arm64.tar.gz"
-      sha256 "b8fb74cd1d0cde909abf399ef6096e2850efad1c7967cede76bca85a37fa1c69"
+      sha256 "e0f9370a21dfc1ef62626d47be0e52caf63613a804a8946338b13db8f6828298"
 
       def install
         bin.install "nsc"
@@ -40,7 +40,7 @@ class Nsc < Formula
     end
     if Hardware::CPU.intel?
       url "https://get.namespace.so/packages/nsc/v0.0.329/nsc_0.0.329_linux_amd64.tar.gz"
-      sha256 "13f1a991babdfb9b2be610581c74ec7314987b2a209a2b88af262cf1ab2458bb"
+      sha256 "7fe770b7ddf881e4684b1fcded5774d44f49a968c6eca6e512d3c4c299b7d195"
 
       def install
         bin.install "nsc"
