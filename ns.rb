@@ -10,7 +10,7 @@ class Ns < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://get.namespace.so/packages/ns/v0.0.335/ns_0.0.335_darwin_arm64.tar.gz"
-      sha256 "2e8e3594cdce184191b44fe3a494cdb0efd2e9910cb0efaba6c7048b095f945f"
+      sha256 "b0706d924ad229b3c20f72a5aa588eb97c8488cd60181d48d4a9310822914b2c"
 
       def install
         bin.install "ns"
@@ -18,7 +18,7 @@ class Ns < Formula
     end
     if Hardware::CPU.intel?
       url "https://get.namespace.so/packages/ns/v0.0.335/ns_0.0.335_darwin_amd64.tar.gz"
-      sha256 "452559ab4ade7c5369b29355cb146dcbfe7129998682f14f12dd7a04d9a52e43"
+      sha256 "ccbd34ff7422c51b35fc790b303c78b6d1a2e5b9971e923bdda73a2d58488ca9"
 
       def install
         bin.install "ns"
@@ -29,7 +29,7 @@ class Ns < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://get.namespace.so/packages/ns/v0.0.335/ns_0.0.335_linux_arm64.tar.gz"
-      sha256 "447b66845002e278368b75922adcfbd51692d5bc31c72416f881056d165ffc91"
+      sha256 "118bac3ad5bcbd11a649f3e1f9d8647307754c2f4d8ae939039851239b2398a5"
 
       def install
         bin.install "ns"
@@ -37,7 +37,7 @@ class Ns < Formula
     end
     if Hardware::CPU.intel?
       url "https://get.namespace.so/packages/ns/v0.0.335/ns_0.0.335_linux_amd64.tar.gz"
-      sha256 "69716f99b450e943acf857bc2b86ad98320b847e0b354293bbfc125138a8ee3d"
+      sha256 "3148b2851c91107d75024336977aff917340393c1aed7f10236532578372179d"
 
       def install
         bin.install "ns"
