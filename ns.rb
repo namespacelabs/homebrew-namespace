@@ -5,20 +5,20 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.336"
+  version "0.0.337"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/ns/v0.0.336/ns_0.0.336_darwin_arm64.tar.gz"
-      sha256 "f6dd3e0589eb333ca10bbc7934167256b475a85b000bbfafc26faa2e4d400a58"
+    if Hardware::CPU.intel?
+      url "https://get.namespace.so/packages/ns/v0.0.337/ns_0.0.337_darwin_amd64.tar.gz"
+      sha256 "25a49368f9ac2199cd95692fcc3cebd7d8333e133f063cc223de0eee46f7c827"
 
       def install
         bin.install "ns"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/ns/v0.0.336/ns_0.0.336_darwin_amd64.tar.gz"
-      sha256 "fe37def323bc601c240cff4cde6b651de1aa54b29cd48272aaef84a90c155106"
+    if Hardware::CPU.arm?
+      url "https://get.namespace.so/packages/ns/v0.0.337/ns_0.0.337_darwin_arm64.tar.gz"
+      sha256 "2b134061a4b88776ba30e1ac843d77a49080fff18aaa2e6447c3628a52629163"
 
       def install
         bin.install "ns"
@@ -27,17 +27,17 @@ class Ns < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/ns/v0.0.336/ns_0.0.336_linux_arm64.tar.gz"
-      sha256 "fefe1ce50cb0c2476819cdb6b3e80488a68d2fb1704c2de6da18803fb1effb0a"
+    if Hardware::CPU.intel?
+      url "https://get.namespace.so/packages/ns/v0.0.337/ns_0.0.337_linux_amd64.tar.gz"
+      sha256 "a9888e78c32982c06217b64dce8c0f7831468bdd5c3a78ac7a744cd68e200300"
 
       def install
         bin.install "ns"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/ns/v0.0.336/ns_0.0.336_linux_amd64.tar.gz"
-      sha256 "e932590ac550a7c749ca3cc9ccd85835fe72d567aa3856ccc074e3d276b732d7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://get.namespace.so/packages/ns/v0.0.337/ns_0.0.337_linux_arm64.tar.gz"
+      sha256 "3274b4ecbdd5fd73a09c69f9caa460a6d34273d37fd8fc28b48b9e208cd86bfa"
 
       def install
         bin.install "ns"
