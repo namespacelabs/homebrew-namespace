@@ -5,21 +5,21 @@
 class Nsc < Formula
   desc "Container-optimized cloud infrastructure that just works."
   homepage "https://namespace.so/"
-  version "0.0.358"
+  version "0.0.359"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/nsc/v0.0.358/nsc_0.0.358_darwin_amd64.tar.gz"
-      sha256 "c1527f311276b50576da439fa7584358101a41633504cf2cf2e815de69cb25c8"
+    if Hardware::CPU.arm?
+      url "https://get.namespace.so/packages/nsc/v0.0.359/nsc_0.0.359_darwin_arm64.tar.gz"
+      sha256 "154787ac0965a98a8db203a3f6ec0c94939a2c74bd369f5dcc064fc5039c5a55"
 
       def install
         bin.install "nsc"
         bin.install "docker-credential-nsc"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/nsc/v0.0.358/nsc_0.0.358_darwin_arm64.tar.gz"
-      sha256 "a15c7fa8d79924432a59522b7e767f7590e27cdaf805450f946bb357961707b2"
+    if Hardware::CPU.intel?
+      url "https://get.namespace.so/packages/nsc/v0.0.359/nsc_0.0.359_darwin_amd64.tar.gz"
+      sha256 "df1eb387c56d9e780deff8586da10f80d05266aa08de5a6864f44337e306c5fd"
 
       def install
         bin.install "nsc"
@@ -29,18 +29,18 @@ class Nsc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/nsc/v0.0.358/nsc_0.0.358_linux_amd64.tar.gz"
-      sha256 "d534aeab86a77eaeec6e776865df840e4d494d136db2eeda149a436f95911640"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://get.namespace.so/packages/nsc/v0.0.359/nsc_0.0.359_linux_arm64.tar.gz"
+      sha256 "753b69b76a26e2f5e5a92048b857aa41f8ce4276e921a3c4bef7c88b485b3ff7"
 
       def install
         bin.install "nsc"
         bin.install "docker-credential-nsc"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/nsc/v0.0.358/nsc_0.0.358_linux_arm64.tar.gz"
-      sha256 "7cc0a537da0de358d38b38e2d4635575f4219140b7f92388b7cda798d6edecad"
+    if Hardware::CPU.intel?
+      url "https://get.namespace.so/packages/nsc/v0.0.359/nsc_0.0.359_linux_amd64.tar.gz"
+      sha256 "517efe45895258a10019c5f9bbe1edd4ecf0b3b35da850c85720d2d620e34471"
 
       def install
         bin.install "nsc"
