@@ -5,20 +5,20 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.372"
+  version "0.0.373"
 
   on_macos do
-    on_intel do
-      url "https://get.namespace.so/packages/ns/v0.0.372/ns_0.0.372_darwin_amd64.tar.gz"
-      sha256 "7c8b39054c87ffe43f7384a62b4a34d32304bd5090806066bd50b93cf666268f"
+    if Hardware::CPU.arm?
+      url "https://get.namespace.so/packages/ns/v0.0.373/ns_0.0.373_darwin_arm64.tar.gz"
+      sha256 "eaf10b2ec7b275a7e39a0d0604d5fa0e9163825294cc8975ea9b5c734154210e"
 
       def install
         bin.install "ns"
       end
     end
-    on_arm do
-      url "https://get.namespace.so/packages/ns/v0.0.372/ns_0.0.372_darwin_arm64.tar.gz"
-      sha256 "15bda364977e884ddc4cccb636a4240b8a5419c0bb09cf7d5b6b288f95c23bfc"
+    if Hardware::CPU.intel?
+      url "https://get.namespace.so/packages/ns/v0.0.373/ns_0.0.373_darwin_amd64.tar.gz"
+      sha256 "38db23dd506c1c8da092204b70f6188b4ed650d7185b166251b7fb65020ab9e4"
 
       def install
         bin.install "ns"
@@ -27,24 +27,20 @@ class Ns < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://get.namespace.so/packages/ns/v0.0.372/ns_0.0.372_linux_amd64.tar.gz"
-        sha256 "46ccf29116fb3a914145db0926781d654cbab9e946686c548dd6e5c6485f519c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://get.namespace.so/packages/ns/v0.0.373/ns_0.0.373_linux_arm64.tar.gz"
+      sha256 "d833c12ead24bd37fc7c9f7c913a9d659ddb90c07cde7e35ea37420bcc75d3fa"
 
-        def install
-          bin.install "ns"
-        end
+      def install
+        bin.install "ns"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://get.namespace.so/packages/ns/v0.0.372/ns_0.0.372_linux_arm64.tar.gz"
-        sha256 "6e446124df04c6213ae357ae7b93783526866437e706785257588be7ce290e66"
+    if Hardware::CPU.intel?
+      url "https://get.namespace.so/packages/ns/v0.0.373/ns_0.0.373_linux_amd64.tar.gz"
+      sha256 "1eae71ca9cbc675066ef1cfbd754826eac3c66a4aa495eb146ca818aaa1a1d7b"
 
-        def install
-          bin.install "ns"
-        end
+      def install
+        bin.install "ns"
       end
     end
   end
