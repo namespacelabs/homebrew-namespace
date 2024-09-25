@@ -5,12 +5,12 @@
 class Nsc < Formula
   desc "Container-optimized cloud infrastructure that just works."
   homepage "https://namespace.so/"
-  version "0.0.392"
+  version "0.0.393"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/nsc/v0.0.392/nsc_0.0.392_darwin_arm64.tar.gz"
-      sha256 "a1815ad917f4a2c804b10e6f184dee279fdd3172314f7993ed61b9b86f68408c"
+      url "https://get.namespace.so/packages/nsc/v0.0.393/nsc_0.0.393_darwin_arm64.tar.gz"
+      sha256 "552276ac36081eea67f4cd429ed37f2bac35d3979b81443091556a150c9878c1"
 
       def install
         bin.install "nsc"
@@ -19,8 +19,8 @@ class Nsc < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/nsc/v0.0.392/nsc_0.0.392_darwin_amd64.tar.gz"
-      sha256 "73856532617af1aa0aeb74fc63c963e1ab0e0e65afaaec36d8eedbf0776edc50"
+      url "https://get.namespace.so/packages/nsc/v0.0.393/nsc_0.0.393_darwin_amd64.tar.gz"
+      sha256 "155a03bd3f390d67ca457ca2d33e68acb36420c2eecf8fd95e8f8b89d9c72d98"
 
       def install
         bin.install "nsc"
@@ -32,8 +32,8 @@ class Nsc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/nsc/v0.0.392/nsc_0.0.392_linux_arm64.tar.gz"
-      sha256 "ee0a4dd25cd2f35303049e4aca9757261172aadc931846aea71db7823cec806f"
+      url "https://get.namespace.so/packages/nsc/v0.0.393/nsc_0.0.393_linux_arm64.tar.gz"
+      sha256 "68b8cf65f6559361371317ec3d4e5dc33fb2b5f223e0dc8b8475ad2b342d246e"
 
       def install
         bin.install "nsc"
@@ -42,8 +42,8 @@ class Nsc < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/nsc/v0.0.392/nsc_0.0.392_linux_amd64.tar.gz"
-      sha256 "8eced48d1937f1102ec6797a8b23bdd5c64003944e034cb5c17c632c93d67c0d"
+      url "https://get.namespace.so/packages/nsc/v0.0.393/nsc_0.0.393_linux_amd64.tar.gz"
+      sha256 "b3eb3f35c90eb6e7704ff7e2575beddd79a83fdcb62119b4186b57905ed7e596"
 
       def install
         bin.install "nsc"
