@@ -5,20 +5,20 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.394"
+  version "0.0.395"
 
   on_macos do
     on_intel do
-      url "https://get.namespace.so/packages/ns/v0.0.394/ns_0.0.394_darwin_amd64.tar.gz"
-      sha256 "817a8e46fbb70b352f084d256352acf398ef962fd0dd0581c30126530b8140f1"
+      url "https://get.namespace.so/packages/ns/v0.0.395/ns_0.0.395_darwin_amd64.tar.gz"
+      sha256 "cf8056b8cad9bb634c6e98429fa48131e9490b3c6a2de448fadc063489f683b7"
 
       def install
         bin.install "ns"
       end
     end
     on_arm do
-      url "https://get.namespace.so/packages/ns/v0.0.394/ns_0.0.394_darwin_arm64.tar.gz"
-      sha256 "374dc442ec3ff22a4a189c869a38dd45cf2521c95eb5433ec9ed7302c3fcb249"
+      url "https://get.namespace.so/packages/ns/v0.0.395/ns_0.0.395_darwin_arm64.tar.gz"
+      sha256 "082e48863bfd935ee3e2cd89350000dc7279aafbc202a55ec90d677ec8d61045"
 
       def install
         bin.install "ns"
@@ -29,8 +29,8 @@ class Ns < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://get.namespace.so/packages/ns/v0.0.394/ns_0.0.394_linux_amd64.tar.gz"
-        sha256 "83a8a814f50f22a9b53c8882f13742ca2c6e1ca24a18bc7b0c144ed5ab14e73a"
+        url "https://get.namespace.so/packages/ns/v0.0.395/ns_0.0.395_linux_amd64.tar.gz"
+        sha256 "97bfbb84b5b1683052a44b7a6620df141b6a99beed24a95ba23cba997d93df9b"
 
         def install
           bin.install "ns"
@@ -39,8 +39,8 @@ class Ns < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://get.namespace.so/packages/ns/v0.0.394/ns_0.0.394_linux_arm64.tar.gz"
-        sha256 "3b722d8d4d7c6e84fd8f7e4be5f60e05aa87c85db648282fe859082f0edbbcdc"
+        url "https://get.namespace.so/packages/ns/v0.0.395/ns_0.0.395_linux_arm64.tar.gz"
+        sha256 "3cde3f9e2e6acb0e89a019910d8146b4e2ea7a2f345eec54e9ba7fb41318115f"
 
         def install
           bin.install "ns"
