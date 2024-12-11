@@ -5,12 +5,12 @@
 class Nsc < Formula
   desc "Container-optimized cloud infrastructure that just works."
   homepage "https://namespace.so/"
-  version "0.0.396"
+  version "0.0.397"
 
   on_macos do
-    on_intel do
-      url "https://get.namespace.so/packages/nsc/v0.0.396/nsc_0.0.396_darwin_amd64.tar.gz"
-      sha256 "69f35dda66777fce642c62c96fcfdba7aeee1e227e110ca4f92db6da6b5a760c"
+    if Hardware::CPU.arm?
+      url "https://get.namespace.so/packages/nsc/v0.0.397/nsc_0.0.397_darwin_arm64.tar.gz"
+      sha256 "a071889e0e0bd4e3ffd521956522384c1c86961449d094f874334d183e155dd8"
 
       def install
         bin.install "nsc"
@@ -18,9 +18,9 @@ class Nsc < Formula
         bin.install "bazel-credential-nsc"
       end
     end
-    on_arm do
-      url "https://get.namespace.so/packages/nsc/v0.0.396/nsc_0.0.396_darwin_arm64.tar.gz"
-      sha256 "06a7fce1351d732c7d171beba22f63353452455b8f7a645fd727f9ede18071e4"
+    if Hardware::CPU.intel?
+      url "https://get.namespace.so/packages/nsc/v0.0.397/nsc_0.0.397_darwin_amd64.tar.gz"
+      sha256 "cc8f3487817217664cbaf9e866a4f84da2b89dcefaa116e180b2db546e657793"
 
       def install
         bin.install "nsc"
@@ -31,28 +31,24 @@ class Nsc < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://get.namespace.so/packages/nsc/v0.0.396/nsc_0.0.396_linux_amd64.tar.gz"
-        sha256 "2be98417753f67422514ed13875bdae96e0789d7f3d6b112a197b84b3ef848b3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://get.namespace.so/packages/nsc/v0.0.397/nsc_0.0.397_linux_arm64.tar.gz"
+      sha256 "d6b1e5cd5e4d9db96d77db2e9bdedd4bb2e11d20d9c3ac153108290cea2e470b"
 
-        def install
-          bin.install "nsc"
-          bin.install "docker-credential-nsc"
-          bin.install "bazel-credential-nsc"
-        end
+      def install
+        bin.install "nsc"
+        bin.install "docker-credential-nsc"
+        bin.install "bazel-credential-nsc"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://get.namespace.so/packages/nsc/v0.0.396/nsc_0.0.396_linux_arm64.tar.gz"
-        sha256 "3b93b71b15da70a955625d323c6cf070e498f2b08af69708a53ba7e8d1fce965"
+    if Hardware::CPU.intel?
+      url "https://get.namespace.so/packages/nsc/v0.0.397/nsc_0.0.397_linux_amd64.tar.gz"
+      sha256 "ce7d83f9154ca94136df76107f3afb7436801f5c1a649b2e738ba22248bef82b"
 
-        def install
-          bin.install "nsc"
-          bin.install "docker-credential-nsc"
-          bin.install "bazel-credential-nsc"
-        end
+      def install
+        bin.install "nsc"
+        bin.install "docker-credential-nsc"
+        bin.install "bazel-credential-nsc"
       end
     end
   end
