@@ -5,20 +5,20 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.427"
+  version "0.0.428"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/ns/v0.0.427/ns_0.0.427_darwin_amd64.tar.gz"
-      sha256 "c54b7c37cd79d054b2cc3ee03956ca2303766801a0e89d3baf7f6a9832b2f387"
+      url "https://get.namespace.so/packages/ns/v0.0.428/ns_0.0.428_darwin_amd64.tar.gz"
+      sha256 "41aaa0583e2f1cc46d03845ad598d6609ce68a185c94090b7bc01382dd490fdf"
 
       def install
         bin.install "ns"
       end
     end
     if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/ns/v0.0.427/ns_0.0.427_darwin_arm64.tar.gz"
-      sha256 "ff8153db4f89e17e0c50dc8c51d8e87d51b32b9e17028e0d3a012be3c49409ea"
+      url "https://get.namespace.so/packages/ns/v0.0.428/ns_0.0.428_darwin_arm64.tar.gz"
+      sha256 "a8a9ca044467961f7e8a1a9e5780a4c8e1cd6185658f2f0ec2a7578898d18873"
 
       def install
         bin.install "ns"
@@ -28,15 +28,15 @@ class Ns < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/ns/v0.0.427/ns_0.0.427_linux_amd64.tar.gz"
-      sha256 "f824bafabd2acb98610e9c6a6f6f26861f7f18220e4cc399a3e31732c9de2ba2"
+      url "https://get.namespace.so/packages/ns/v0.0.428/ns_0.0.428_linux_amd64.tar.gz"
+      sha256 "8dd9601923a2daa274222db9664df570f46c598b8571aa09c36503c3ee441ec3"
       def install
         bin.install "ns"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/ns/v0.0.427/ns_0.0.427_linux_arm64.tar.gz"
-      sha256 "d95e36ff5d23eb9a1195adc0d2e425c508b7ec62befc45d99f53a2f65fa97698"
+      url "https://get.namespace.so/packages/ns/v0.0.428/ns_0.0.428_linux_arm64.tar.gz"
+      sha256 "e1432f2d70e1398e777a11146e1fc1e695cbe610e97123ade4d466d1d78416bd"
       def install
         bin.install "ns"
       end
