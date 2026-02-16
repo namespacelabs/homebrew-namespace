@@ -5,12 +5,12 @@
 class Nsc < Formula
   desc "Container-optimized cloud infrastructure that just works."
   homepage "https://namespace.so/"
-  version "0.0.484"
+  version "0.0.485"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/nsc/v0.0.484/nsc_0.0.484_darwin_amd64.tar.gz"
-      sha256 "bb4a52c94430d0825c222a642ed9b431e983f4114edbf66802506e1697d7d472"
+      url "https://get.namespace.so/packages/nsc/v0.0.485/nsc_0.0.485_darwin_amd64.tar.gz"
+      sha256 "510d8b71580ec48c1d2d5f935db1f635941c27f19a3568d27c6b51caca34b1e6"
 
       def install
         bin.install "nsc"
@@ -19,8 +19,8 @@ class Nsc < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/nsc/v0.0.484/nsc_0.0.484_darwin_arm64.tar.gz"
-      sha256 "f24d896f2e8708f0a505a48652ba8828fe8c8a8545ac60fa1f002c8ca6524900"
+      url "https://get.namespace.so/packages/nsc/v0.0.485/nsc_0.0.485_darwin_arm64.tar.gz"
+      sha256 "a79ec72b19aa44e334379006e7528208d56cc16011d35f6e0dd490d16d05290a"
 
       def install
         bin.install "nsc"
@@ -32,8 +32,8 @@ class Nsc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/nsc/v0.0.484/nsc_0.0.484_linux_amd64.tar.gz"
-      sha256 "b13e185928d0edd53afd057ebee726d404525dfe7221c02d1e8098c5b5c9a51b"
+      url "https://get.namespace.so/packages/nsc/v0.0.485/nsc_0.0.485_linux_amd64.tar.gz"
+      sha256 "d9cc09105cdeda32561e9925dbc5cd0b731345d10b798c41895961ebe9adae8d"
       def install
         bin.install "nsc"
         bin.install "docker-credential-nsc"
@@ -41,8 +41,8 @@ class Nsc < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/nsc/v0.0.484/nsc_0.0.484_linux_arm64.tar.gz"
-      sha256 "9f79ce2018c69c774d5217d60fb407bc6396f8376b65a3657dab63e28d7b36f3"
+      url "https://get.namespace.so/packages/nsc/v0.0.485/nsc_0.0.485_linux_arm64.tar.gz"
+      sha256 "44b36cd8e17a3b3874d68a524a1131c33204d786d4543c3a7e5b79a5b1330462"
       def install
         bin.install "nsc"
         bin.install "docker-credential-nsc"
