@@ -5,22 +5,22 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.489"
+  version "0.0.490"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/ns/v0.0.489/ns_0.0.489_darwin_amd64.tar.gz"
-      sha256 "c5df9022ea95b7cca2e036f86eecaae800d024a7e05d086b9ea30e8bc94c1cfa"
+      url "https://get.namespace.so/packages/ns/v0.0.490/ns_0.0.490_darwin_amd64.tar.gz"
+      sha256 "c4470470b6694bf5b1cbb4498de651f9927a1108d9c609c0bdedea29a9517e73"
 
-      def install
+      define_method(:install) do
         bin.install "ns"
       end
     end
     if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/ns/v0.0.489/ns_0.0.489_darwin_arm64.tar.gz"
-      sha256 "10aa13d0f82bcd27151ef116a08aec41d1c800617f0d3ab405aecd72a365a8f0"
+      url "https://get.namespace.so/packages/ns/v0.0.490/ns_0.0.490_darwin_arm64.tar.gz"
+      sha256 "fab25311f563c2f3349a431b39baaa574240230b03151f6dbb0690e62bb0e90b"
 
-      def install
+      define_method(:install) do
         bin.install "ns"
       end
     end
@@ -28,16 +28,16 @@ class Ns < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/ns/v0.0.489/ns_0.0.489_linux_amd64.tar.gz"
-      sha256 "9d2605cb76b9c07fde8984e154a2378fb9781f58b9b36971c419b6f81a86a7f9"
-      def install
+      url "https://get.namespace.so/packages/ns/v0.0.490/ns_0.0.490_linux_amd64.tar.gz"
+      sha256 "fa4903cd5ca912d951e9f8971a35024cb6dc0425374f4ae6b346927be735a7c7"
+      define_method(:install) do
         bin.install "ns"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/ns/v0.0.489/ns_0.0.489_linux_arm64.tar.gz"
-      sha256 "b9481024845e437b258935bdf0dcdbd0c4ee068f204031d5cb675e643a69e270"
-      def install
+      url "https://get.namespace.so/packages/ns/v0.0.490/ns_0.0.490_linux_arm64.tar.gz"
+      sha256 "e82ec3143d73e81b8aa7bf75ce11249fd1da8e3aa4da733c071ab09f408e9a43"
+      define_method(:install) do
         bin.install "ns"
       end
     end
