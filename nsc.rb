@@ -5,12 +5,12 @@
 class Nsc < Formula
   desc "Container-optimized cloud infrastructure that just works."
   homepage "https://namespace.so/"
-  version "0.0.561"
+  version "0.0.562"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/nsc/v0.0.561/nsc_0.0.561_darwin_amd64.tar.gz"
-      sha256 "d9133b1820e658df5b1d8268557aebb503fca57fca4de45eaed232f2de05fba0"
+      url "https://get.namespace.so/packages/nsc/v0.0.562/nsc_0.0.562_darwin_amd64.tar.gz"
+      sha256 "675061a717c2b37100dbf9b424bcdb915f8517308af1652898a898cdd0e11327"
 
       define_method(:install) do
         bin.install "nsc"
@@ -19,8 +19,8 @@ class Nsc < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/nsc/v0.0.561/nsc_0.0.561_darwin_arm64.tar.gz"
-      sha256 "67f17c28cadfe2e67e3a6600141d6133dba24e0fdb01b855d62fbd2eb48161fa"
+      url "https://get.namespace.so/packages/nsc/v0.0.562/nsc_0.0.562_darwin_arm64.tar.gz"
+      sha256 "b141a4bebb1fc0f236777120197c634fc9f20f5c20ef4fa1b204db459f2393f0"
 
       define_method(:install) do
         bin.install "nsc"
@@ -32,8 +32,8 @@ class Nsc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/nsc/v0.0.561/nsc_0.0.561_linux_amd64.tar.gz"
-      sha256 "a9712493b257b75a94e7f6a0729d6a7ba90043db7e627fb522aaa02b2f08b019"
+      url "https://get.namespace.so/packages/nsc/v0.0.562/nsc_0.0.562_linux_amd64.tar.gz"
+      sha256 "467f0b32c53f4d70a7139c42a52aeb5b2ed70ee3725d4410fabceab51e3a826c"
       define_method(:install) do
         bin.install "nsc"
         bin.install "docker-credential-nsc"
@@ -41,8 +41,8 @@ class Nsc < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/nsc/v0.0.561/nsc_0.0.561_linux_arm64.tar.gz"
-      sha256 "d599a992d3d1124ba3443aa4ca0f19530205681e1c0e49000354939497bf29a8"
+      url "https://get.namespace.so/packages/nsc/v0.0.562/nsc_0.0.562_linux_arm64.tar.gz"
+      sha256 "ce26ae25378325b82e1082b4911705d28be13f967a1ae9e6d57c8b76f4742cb2"
       define_method(:install) do
         bin.install "nsc"
         bin.install "docker-credential-nsc"
