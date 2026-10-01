@@ -5,20 +5,20 @@
 class Ns < Formula
   desc "Developer platform with a unified experience from development to production."
   homepage "https://namespacelabs.com/"
-  version "0.0.583"
+  version "0.0.584"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://get.namespace.so/packages/ns/v0.0.583/ns_0.0.583_darwin_amd64.tar.gz"
-      sha256 "e5a2ccb04409d36d150d47215a1c068484a23b040ff2cb04a6aef7632e379ea6"
+      url "https://get.namespace.so/packages/ns/v0.0.584/ns_0.0.584_darwin_amd64.tar.gz"
+      sha256 "64c1fab4011a4b46ce98ea67696d5f2ecd1dcb628996cd088b23d87d2336fab6"
 
       define_method(:install) do
         bin.install "ns"
       end
     end
     if Hardware::CPU.arm?
-      url "https://get.namespace.so/packages/ns/v0.0.583/ns_0.0.583_darwin_arm64.tar.gz"
-      sha256 "780a6185badead421e797be716400a11ebcdbb863bd0c66179e61d924f389aba"
+      url "https://get.namespace.so/packages/ns/v0.0.584/ns_0.0.584_darwin_arm64.tar.gz"
+      sha256 "7945e1eeaa64fb4a91036b55e0dba0c09421d77d2909044426553f2834f34758"
 
       define_method(:install) do
         bin.install "ns"
@@ -28,15 +28,15 @@ class Ns < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/ns/v0.0.583/ns_0.0.583_linux_amd64.tar.gz"
-      sha256 "015bfa8ba2d3bdfec53ea29198bb4557c26da65438e3e43283b8a0360c7dd0d7"
+      url "https://get.namespace.so/packages/ns/v0.0.584/ns_0.0.584_linux_amd64.tar.gz"
+      sha256 "0aaa1cc87f5861b38ed5ecec0805da6989e1b7cafae4cb9753342c86b9f99321"
       define_method(:install) do
         bin.install "ns"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.namespace.so/packages/ns/v0.0.583/ns_0.0.583_linux_arm64.tar.gz"
-      sha256 "ed7ec2e8183f8daaabf2d953b388430a7fd65bcea6f6ee5c30678b5afe802abe"
+      url "https://get.namespace.so/packages/ns/v0.0.584/ns_0.0.584_linux_arm64.tar.gz"
+      sha256 "9e7b243c610133463ad9376ad0260e88ce0c4724c84bf800f021ca1c925440c2"
       define_method(:install) do
         bin.install "ns"
       end
